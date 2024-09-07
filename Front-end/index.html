@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Roboto';
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .textfield-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: fit-content;
+        }
+
+        .textfield-container input {
+            padding-left: 10px;
+            height: 20px;
+            border: #eee 1px solid;
+            border-radius: 5px;
+        }
+
+        .textfield-container .material-symbols-outlined {
+            position: absolute;
+            right: 5px;
+            top: 5%;
+            color: #eee;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #033E8C;
+        }
+
+        .button-ghost {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border-radius: 5px;
+            color: #033E8C;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .button-ghost:hover {
+            background-color: whitesmoke;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            width: 120px;
+            padding: 10px;
+            position: absolute;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px 0 10px;
+            background-color: white;
+            color: #033E8C;
+            width: 120px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .dropdown-btn:hover {
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .content {
+            padding-top: 5%;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        .tab-btn {
+            background-color: transparent;
+            color: #eee;
+            font-size: medium;
+            height: 40px;
+            border-radius: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tab-btn:focus {
+            color: #033E8C;
+            border-bottom: #033E8C solid 2px;
+        }
+        .btn {
+            border: none;
+            height: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease, color 0.5s ease; 
+        }
+        .border {
+            border: #033E8C 1px solid;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            padding: 10px;
+            text-align: center;
+        }
+        table{
+            border-collapse: separate;
+            border-spacing: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div style="display: flex; align-items: center;">
+            <h3 style="margin: 0 20px 0 20px ; color: #033E8C; cursor: pointer;">COMPANY NAME</h3>
+            <div class="textfield-container">
+                <input class="textfield" type="text" name="" id="" placeholder="Search">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </div>
+        </div>
+        <div>
+            <ul style="display: flex; gap: 80px;">
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            work
+                        </span>
+                        Jobs
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            task
+                        </span>
+                        Workshop
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <ul style="display: flex; gap: 5px;">
+                <li>
+                    <button class="button-ghost">
+                        <span class="material-symbols-outlined">
+                            sms
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="button-ghost">
+                        <span class="material-symbols-outlined">
+                            notifications
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    John Doe!
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </button>
+                <div class="dropdown-content" id="profile_dropdown">
+                    <a href="">My Profile</a>
+                    <a href="">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div style="background-color: white; width: 80%; border-radius: 10px; padding: 20px;">
+            <div>
+                <h2 style="color: #033E8C;">Inventory</h2>
+                <ul style="display: flex; padding: 0; border-bottom: #eee 2px solid;">
+                    <button class="tab-btn">
+                        Parts
+                    </button>
+                    <button class="tab-btn">
+                        Units
+                    </button>
+
+                    <button class="tab-btn">
+                        Suppliers
+                    </button>
+                </ul>
+            </div>
+            <div style="display: flex; height: 30px; justify-content: start; align-items: center; gap: 10px;">
+                <h4>Parts</h4>
+                <div class="textfield-container">
+                    <input class="textfield" type="text" name="" id="" placeholder="Search">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+                <button class="btn" style="background-color: #033E8C; color: #fff;" onmouseover="this.style.backgroundColor='#022452'" onmouseout="this.style.backgroundColor='#033E8C'">
+                    Add New Part
+                </button>
+                <button class="btn" style="background-color: #5BB85D; color: #fff;" onmouseover="this.style.backgroundColor='#48924a'" onmouseout="this.style.backgroundColor='#5BB85D'">
+                    Create Restock Order
+                </button>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3 style="color: #033E8C; margin: 20px 0 20px 0;">Views</h3>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Part in H.O.</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Part in Warehouses</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Part in Technicians</label>
+                    </div>
+                    <h3 style="color: #033E8C; margin: 20px 0 20px 0;">Sort by</h3>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Most Sales.</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Most Orders</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">None</label>
+                    </div>
+                    <h3 style="color: #033E8C; margin: 20px 0 20px 0;">Status</h3>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">All</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">In stock</label>
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Needs Restocking</label>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <table class="" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>ID</th>
+                                <th>Part Name</th>
+                                <th>In Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>WW120</td>
+                                <td>Water Pump</td>
+                                <td>12</td>  
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>WW120</td>
+                                <td>Water Pump</td>
+                                <td>12</td>  
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>WW120</td>
+                                <td>Water Pump</td>
+                                <td>12</td>  
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>WW120</td>
+                                <td>Water Pump</td>
+                                <td>12</td>  
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>WW120</td>
+                                <td>Water Pump</td>
+                                <td>12</td>  
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function toggleDropdown() {
+        let dropdown = document.getElementById("profile_dropdown")
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none"
+        } else {
+            dropdown.style.display = "block"
+        }
+    }
+</script>
+
+</html>
