@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Structure Tag</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>TAG</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;html&gt;</td>
+                <td>ใช้ในการกำหนดว่าเป็นเอกสาร HTML</td>
+            </tr>
+            <tr>
+                <td>&lt;head&gt;</td>
+                <td>ใช้ในการใส่ข้อมูลเพิ่มเติม เช่น meta tags, title, link สำหรับ CSS, script สำหรับ JavaScript</td>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>ส่วนที่จะแสดงผลเนื้อหาในหน้าเว็บ</td>
+            </tr>
+            <tr>
+                <td>&lt;header&gt;</td>
+                <td>ส่วนหัวของเว็บไซต์ เช่น โลโก้ เมนูนำทาง</td>
+            </tr>
+            <tr>
+                <td>&lt;footer&gt;</td>
+                <td>ส่วนท้ายของเว็บไซต์ เช่น ลิขสิทธิ์ ข้อมูลติดต่อ</td>
+            </tr>
+            <tr>
+                <td>&lt;section&gt;</td>
+                <td>ใช้ในการแบ่งส่วนของเนื้อหาหลักในหน้าเว็บ</td>
+            </tr>
+            <tr>
+                <td>&lt;article&gt;</td>
+                <td>ใช้สำหรับบทความหรือเนื้อหาที่เป็นหน่วยที่สามารถแยกออกมาได้</td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>ใช้ในการจัดกลุ่มเนื้อหา เป็นกล่องโครงสร้างแบบบล็อก</td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt;</td>
+                <td>ใช้ในการจัดกลุ่มเนื้อหาแบบอินไลน์</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Text Content Tags</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>TAG</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                <td>แท็กหัวข้อจากใหญ่สุด (h1) ไปจนถึงเล็กสุด (h6)</td>
+                <td><h1>หัวข้อ</h1><h2>หัวข้อ</h2><h3>หัวข้อ</h3><h4>หัวข้อ</h4><h5>หัวข้อ</h5><h6>หัวข้อ</h6></td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>ใช้สำหรับย่อหน้าของข้อความ</td>
+                <td><p>ข้อความ</p></td>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td>ทำให้ข้อความหนา (bold)</td>
+                <td><b>ข้อความ</b></td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;</td>
+                <td>ทำให้ข้อความเอียง (italic)</td>
+                <td><i>ข้อความ</i></td>
+            </tr>
+            <tr>
+                <td>&lt;s&gt;</td>
+                <td>ทำให้ข้อความมีขีดกลาง (strikethrough)</td>
+                <td><s>ข้อความ</s></td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;</td>
+                <td>ตัวอักษรเหนือ (superscript)</td>
+                <td>ข้อความ<sup>sup</sup></td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;</td>
+                <td>ตัวอักษรใต้ (subscript)</td>
+                <td>ข้อความ<sub>sub</sub></td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;</td>
+                <td>ใช้สำหรับเน้นข้อความ</td>
+                <td><mark>ข้อความ</mark></td>
+            </tr>
+            <tr>
+                <td>&lt;a&gt;</td>
+                <td>ใช้สำหรับสร้างลิงก์</td>
+                <td><a href="https://google.com">ลิงก์</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Table Example</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jame Smith</td>
+                <td>14</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Form and Input Tags</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>TAG</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;form&gt;</td>
+                <td>ใช้ในการสร้างฟอร์มสำหรับรับข้อมูลจากผู้ใช้</td>
+                <td>&lt;form&gt;&lt;/form&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;input type="text"&gt;</td>
+                <td>ช่องกรอกข้อความแบบปกติ</td>
+                <td><input type="text" name="" id="" placeholder="input text"></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="password"&gt;</td>
+                <td>ช่องกรอกรหัสผ่าน (จะซ่อนตัวอักษร)</td>
+                <td><input type="password" name="" id="" placeholder="input password"></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="email"&gt;</td>
+                <td>ช่องกรอกอีเมล (ตรวจสอบรูปแบบอีเมลโดยอัตโนมัติ)</td>
+                <td><input type="email" name="" id="" placeholder="input email"></td>
+            <tr>
+                <td>&lt;input type="number"&gt;</td>
+                <td>ช่องกรอกตัวเลข</td>
+                <td><input type="number" name="" id="" placeholder="input number"></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="radio"&gt;</td>
+                <td>ปุ่มเลือกแบบตัวเลือกเดียว (radio button)</td>
+                <td><input type="radio" name="radio" id="" value=""><input type="radio" name="radio" id="" value=""></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="checkbox"&gt;</td>
+                <td>ช่องเลือกหลายตัวเลือก (checkbox)</td>
+                <td><input type="checkbox" name="radio" id="" value=""><input type="checkbox" name="radio" id="" value=""></td>
+            </tr>
+            <tr>
+                <td>&lt;input type="submit"&gt;</td>
+                <td>ปุ่มส่งข้อมูลฟอร์ม</td>
+                <td><input type="submit" name="" id="" value=""></td>
+            </tr>
+            <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>ใช้สำหรับช่องกรอกข้อความหลายบรรทัด</td>
+                <td><textarea name="" id="" placeholder="input textarea"></textarea></td>
+            </tr>
+            <tr>
+                <td>&lt;select&gt; และ &lt;option&gt;</td>
+                <td>ใช้สำหรับสร้างรายการเลือก (dropdown)</td>
+                <td><select name="" id="">
+                    <option value="">Apple</option>
+                    <option value="">Mango</option>
+                    <option value="">Banana</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;</td>
+                <td>ปุ่มที่ใช้สำหรับทำกิจกรรมต่าง ๆ (เช่นคลิกเพื่อส่งฟอร์ม)</td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
