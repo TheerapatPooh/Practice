@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties Guide</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .example-box {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Properties</h1>
+    
+    <h2>1. Layout and Positioning</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>display</td>
+                <td>กำหนดการแสดงผลของ element เช่น block, inline, none</td>
+                <td>
+                    <div style="display: block;" class="example-box">Block</div>
+                    <span style="display: inline; background-color: yellow;">Inline</span>
+                </td>
+            </tr>
+            <tr>
+                <td>position</td>
+                <td>กำหนดตำแหน่งของ element เช่น relative, absolute, fixed</td>
+                <td>
+                    <div style="position: relative; top: 10px; left: 20px;" class="example-box">Relative</div>
+                </td>
+            </tr>
+            <tr>
+                <td>top, right, bottom, left</td>
+                <td>กำหนดระยะห่างของ element จากขอบเมื่อใช้ร่วมกับ position</td>
+                <td>
+                    <div style="position: relative; top: 20px; left: 30px;" class="example-box">Positioned</div>
+                </td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>จัดวาง element ซ้ายหรือขวาของ container</td>
+                <td>
+                    <div style="float: left; background-color: #f0f0f0;" class="example-box">Float Left</div>
+                </td>
+            </tr>
+            <tr>
+                <td>clear</td>
+                <td>ยกเลิกการลอยตัวของ element (ใช้ร่วมกับ float)</td>
+                <td>
+                    <div style="clear: both;" class="example-box">Clear Both</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Box Model (ขนาดและระยะห่าง)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>width</td>
+                <td>กำหนดความกว้างของ element</td>
+                <td><div style="width: 100px;" class="example-box">Width 100px</div></td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>กำหนดความสูงของ element</td>
+                <td><div style="height: 100px;" class="example-box">Height 100px</div></td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>ระยะห่างภายใน element (จากขอบถึงเนื้อหา)</td>
+                <td>
+                    <div class="container">
+                        <div style="padding: 10px;" class="example-box">Padding 10px</div>
+                    </div>
+                    <p>พื้นที่สีเหลืองด้านในคือ padding ระหว่างเนื้อหาและขอบ</p>
+                </td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>ระยะห่างภายนอก element (จากขอบถึง container อื่น)</td>
+                <td>
+                    <div class="container">
+                        <div style="margin: 20px;" class="example-box">Margin 20px</div>
+                    </div>
+                    <p>พื้นที่ด้านนอกของกรอบ element (เส้นประฟ้า) คือ margin</p>
+                </td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>เส้นขอบรอบ element</td>
+                <td><div style="border: 3px solid red;" class="example-box">Border</div></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+    <h2>3. Typography (ตัวอักษร)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>font-family</td>
+                <td>กำหนดฟอนต์ที่ใช้ใน element</td>
+                <td><div style="font-family: Arial, sans-serif;">Arial Font</div></td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>กำหนดขนาดของตัวอักษร</td>
+                <td><div style="font-size: 20px;">Font Size 20px</div></td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>กำหนดความหนาของตัวอักษร</td>
+                <td><div style="font-weight: bold;">Bold Font</div></td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>จัดตำแหน่งข้อความ (ซ้าย, ขวา, กึ่งกลาง)</td>
+                <td><div style="text-align: center;">Center Aligned Text</div></td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>ตกแต่งข้อความ เช่น underline, overline</td>
+                <td><div style="text-decoration: underline;">Underlined Text</div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Background and Color</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>background-color</td>
+                <td>กำหนดสีพื้นหลังของ element</td>
+                <td><div style="background-color: yellow;" class="example-box">Background Color</div></td>
+            </tr>
+            <tr>
+                <td>background-image</td>
+                <td>ใช้รูปภาพเป็นพื้นหลังของ element</td>
+                <td><div style="background-image: url('https://via.placeholder.com/100'); height: 100px; width: 100px;">Background Image</div></td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>กำหนดสีของข้อความ</td>
+                <td><div style="color: blue;">Text Color Blue</div></td>
+            </tr>
+            <tr>
+                <td>opacity</td>
+                <td>กำหนดความโปร่งแสงของ element (0 ถึง 1)</td>
+                <td><div style="opacity: 0.5; background-color: #f0f0f0;" class="example-box">Opacity 0.5</div></td>
+            </tr>
+            <tr>
+                <td>box-shadow</td>
+                <td>กำหนดเงารอบกล่อง</td>
+                <td><div style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); background-color: #f0f0f0;" class="example-box">Box Shadow</div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. Flexbox</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>display: flex;</td>
+                <td>เปิดใช้งาน Flexbox ใน element</td>
+                <td><div style="display: flex; justify-content: space-between; background-color: #f0f0f0;">
+                    <div style="background-color: lightblue; padding: 10px;">Item 1</div>
+                    <div style="background-color: lightgreen; padding: 10px;">Item 2</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>justify-content</td>
+                <td>จัดเรียง element ในแนวนอน เช่น center, space-between</td>
+                <td><div style="display: flex; justify-content: center; background-color: #f0f0f0;">
+                    <div style="background-color: lightblue; padding: 10px;">Centered Item</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>align-items</td>
+                <td>จัดเรียง element ในแนวตั้ง เช่น center, stretch</td>
+                <td><div style="display: flex; align-items: center; height: 100px; background-color: #f0f0f0;">
+                    <div style="background-color: lightblue; padding: 10px;">Aligned Center</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>flex-direction</td>
+                <td>กำหนดทิศทางการจัดเรียงของ Flexbox เช่น row, column</td>
+                <td><div style="display: flex; flex-direction: column; background-color: #f0f0f0;">
+                    <div style="background-color: lightblue; padding: 10px;">Item 1</div>
+                    <div style="background-color: lightgreen; padding: 10px;">Item 2</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>flex-wrap</td>
+                <td>กำหนดให้ element ย่อแถวหรือไม่เมื่อแสดงผลเกิน container</td>
+                <td><div style="display: flex; flex-wrap: wrap; background-color: #f0f0f0; width: 150px;">
+                    <div style="background-color: lightblue; padding: 10px; width: 100px;">Item 1</div>
+                    <div style="background-color: lightgreen; padding: 10px; width: 100px;">Item 2</div>
+                </div></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
