@@ -1,0 +1,55 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<h1> JavaScript #2 : Data Privacy (15 Marks)</h1>
+
+<button class="btn btn-primary"  id="btn1" onclick="javascript1()" >Insert Name</button>
+<button class="btn btn-primary"  onclick="javascript_lev2()" >Slide</button>
+<button class="btn btn-primary"  id="btn2" onclick="javascript3()" disabled>Show/Hide</button>
+
+<div id="display">
+      <p id="str1" >First Name : xxxxxxx</p>
+      <p id="str2" >Last Name : xxxxxxx</p>
+      <p id="str3" >String length : xx</p>
+</div>
+
+
+<!-- Coding JavaScript 2 here!!!! -->
+ <script>
+      let first
+      let last
+      let lenght
+      function javascript1(){
+            let firstName = prompt('Insert Your FirstName')
+            document.getElementById('str1').innerText = "First Name : "+firstName
+            let lastName = prompt('Insert Your LastName')
+            document.getElementById('str2').innerText = "Last Name : "+lastName
+            let lenght = firstName.length + lastName.length
+            document.getElementById('str3').innerText = "String length : " + lenght
+            document.getElementById('btn2').innerText = "Hide"
+            document.getElementById("btn2").disabled = false;
+            first = firstName
+            last = lastName
+            lenght = stringLenght
+      }
+      function javascript_lev2(){
+            $("#display").slideToggle("fast");
+      }
+      function javascript3() {
+            if(document.getElementById('btn2').innerText === 'Hide') {
+                  document.getElementById('btn2').innerText = 'Show'
+                  document.getElementById('str1').innerText = "First Name : xxxxxxx" 
+                  document.getElementById('str2').innerText = "Last Name : xxxxxxx" 
+                  document.getElementById('str3').innerText = "String Lenght : xx" 
+
+            }
+            else {
+                  document.getElementById('btn2').innerText = 'Hide' 
+                  document.getElementById('str1').innerText = "First Name : " + first
+                  document.getElementById('str2').innerText = "Last Name : " + last
+                  document.getElementById('str3').innerText = "String Lenght : " + lenght
+
+            }
+      }
+ </script>
+
+<!-- Coding JavaScript 2 here!!!! -->
